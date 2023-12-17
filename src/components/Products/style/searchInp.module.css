@@ -1,0 +1,20 @@
+.searchInp{
+    height: 50px;
+    display: flex;
+    margin-left: 20px;
+    border: 1px solid #efefee;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+   
+}
+.searchInp input{
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+}
+.searchInp input:focus{
+    outline: none;
+}

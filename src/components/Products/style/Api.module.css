@@ -1,0 +1,76 @@
+.amazonBoxDiv{
+    border: 3px solid #c4c4c4;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-gap: 45px 20px;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.boxProducts {
+    border: 1px solid #c4c4c4;
+    padding: 3px;
+    transition: 0.3s all;
+}
+
+.boxProducts:hover {
+    border: 0.2px solid #c4c4c4;
+    padding: 1px;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+.proName {
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: block-axis;
+    display: -webkit-box;
+}
+
+.btnDiv {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.boxPriceName {
+    margin-left: 5px;
+}
+
+.addCard {
+    padding: 7px 20px 7px 20px;
+    /* background-color: rgba(153, 139, 61, 0.599); */
+    background-color: gold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.addCard:hover {
+    background-color: #685a11;
+    transition: 0.5s all;
+
+}
+
+.pro {}
+
+.imgDiv {
+    height: 300px;
+     /* width: 300px; */
+   
+}
+
+.imgDiv img {
+    width: 100%;
+    height: 100%;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
