@@ -21,7 +21,7 @@ export default function Search_products({ onChange, setSort, sliceSort, products
                     </select>
 
                     <select class='form-control ' onChange={sliceSort}>
-                        <option value="all">Slice</option>
+                        <option value="all">Limit</option>
                         <option value="five">5</option>
                         <option value="ten">10</option>
                     </select>

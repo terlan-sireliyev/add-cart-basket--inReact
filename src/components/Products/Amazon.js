@@ -49,14 +49,17 @@ export default function Amazon({ cart, handleClik }) {
         if (limitSelectValue === 'five') {
             const limit = [...products].slice(0, 5);
             setFilteredProduct(limit)
+            // setProducts(limit)
         }
         if (limitSelectValue === 'ten') {
             const limit = [...products].slice(0, 10);
             setFilteredProduct(limit)
+            // setProducts(limit)
         }
         if (limitSelectValue === 'all') {
             const limit = [...products].slice(0, products.length);
             setFilteredProduct(limit)
+            // setProducts(limit)
         }
     }
     return (
