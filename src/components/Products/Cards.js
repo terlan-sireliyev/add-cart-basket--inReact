@@ -1,7 +1,7 @@
 import styleApi from './style/Api.module.css'
-
+//bura amazon.js - den api leri cekib getiririk.
 export default function Cards({ item, handleClik }) {
-    const { image, price, title } = item;
+    const { image, price, title ,id} = item;
     return (
         <div className={styleApi.cardBoxDiv}>
             <div className={styleApi.boxProducts}>

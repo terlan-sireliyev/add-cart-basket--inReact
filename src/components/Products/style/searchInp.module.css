@@ -9,6 +9,10 @@
     margin-bottom: 10px;
    
 }
+.searchInp select{
+    width: 100px!important;
+    margin-left: 10px;
+ }
 .searchInp input{
     padding: 10px;
     width: 250px;

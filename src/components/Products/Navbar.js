@@ -1,12 +1,10 @@
 import React from 'react'
 import styleNavbar from './style/navbar.module.css'
 export default function Navbar({ cart, size, setShow }) {
-    // let p = []
-    // let f = []
     const closeCard = () => {
         setShow(false)
         if (!setShow(false)) {
-           return cart.length = 0
+            return cart.length = 0
         } else {
             return size
         }

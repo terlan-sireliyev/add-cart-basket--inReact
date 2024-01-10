@@ -1,4 +1,4 @@
-.amazonBoxDiv{
+.amazonBoxDiv {
     border: 3px solid #c4c4c4;
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
@@ -61,8 +61,8 @@
 
 .imgDiv {
     height: 300px;
-     /* width: 300px; */
-   
+    /* width: 300px; */
+
 }
 
 .imgDiv img {
@@ -73,4 +73,44 @@
 .btn {
     display: flex;
     justify-content: center;
+}
+
+
+@media only screen and (max-width: 380px) {
+    .product_div {
+        /* padding: 0; */
+    }
+
+    .amazonBoxDiv {
+        border: 3px solid #c4c4c4;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 250px);
+        grid-gap: 45px 20px;
+        justify-content: center;
+        padding: 20px;
+        margin-top: 10px;
+        margin-left: 20px;
+        border-radius: 5px;
+    }
+}
+
+
+@media only screen and (max-width: 330px) {
+    .amazonBoxDiv {
+        border: 3px solid #c4c4c4;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 230px);
+        grid-gap: 45px 20px;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 310px) {
+    .amazonBoxDiv {
+        border: 3px solid #c4c4c4;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 200px);
+        grid-gap: 45px 20px;
+        justify-content: center;
+    }
 }
