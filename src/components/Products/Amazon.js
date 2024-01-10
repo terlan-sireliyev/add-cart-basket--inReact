@@ -1,17 +1,14 @@
 import { useEffect, useState } from 'react';
-import Cards from './Cards'
-import styleApi from './style/Api.module.css'
+import Cards from './Cards';
+import styleApi from './style/Api.module.css';
 import Category from './Category';
-import Search_products from './Search_products'
+import Search_products from './Search_products';
 
 export default function Amazon({ cart, handleClik }) {
     const [products, setProducts] = useState([]);
-    const [filteredProduct, setFilteredProduct] = useState([])
-    const [searchItem, setSearchItem] = useState('')
-    const [sort, setSort] = useState('')
-    const [slice, setSlice] = useState('')
-    const [sortBy, setSortBy] = useState('All')
-
+    const [filteredProduct, setFilteredProduct] = useState([]);
+    const [searchItem, setSearchItem] = useState('');
+    const [sort, setSort] = useState('');
     async function fetchData() {
         const res = await ((await fetch('https://fakestoreapi.com/products')).json())
         setProducts(res);
@@ -47,10 +44,25 @@ export default function Amazon({ cart, handleClik }) {
         }
         setSearchItem(searchTerm)
     }
+    const sliceSort = (e) => {
+        const limitSelectValue = e.target.value;
+        if (limitSelectValue === 'five') {
+            const limit = [...products].slice(0, 5);
+            setFilteredProduct(limit)
+        }
+        if (limitSelectValue === 'ten') {
+            const limit = [...products].slice(0, 10);
+            setFilteredProduct(limit)
+        }
+        if (limitSelectValue === 'all') {
+            const limit = [...products].slice(0, products.length);
+            setFilteredProduct(limit)
+        }
+    }
     return (
         <>
             <div className={styleApi.searchDiv}>
-                <Search_products setSort={setSort} setSlice={setSlice} searchItem={searchItem} handleInputChange={handleInputChange} />
+                <Search_products setSort={setSort} sliceSort={sliceSort} searchItem={searchItem} handleInputChange={handleInputChange} />
             </div>
             <div className={styleApi.btn}>
                 {/* burda hansisa problem var start */}

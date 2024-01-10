@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styleSearch from './style/searchInp.module.css'
-export default function Search_products({ onChange, setSort, setSlice, products, setProducts, searchItem, handleInputChange }) {
+export default function Search_products({ onChange, setSort, sliceSort, products, setProducts, searchItem, handleInputChange }) {
 
     return (
         <div>
@@ -20,8 +20,8 @@ export default function Search_products({ onChange, setSort, setSlice, products,
                         <option value="Z-A">Z-A</option>
                     </select>
 
-                    <select class='form-control ' onChange={(e) => setSlice(e.target.value)}>
-                        <option value="">Slice</option>
+                    <select class='form-control ' onChange={sliceSort}>
+                        <option value="all">Slice</option>
                         <option value="five">5</option>
                         <option value="ten">10</option>
                     </select>
