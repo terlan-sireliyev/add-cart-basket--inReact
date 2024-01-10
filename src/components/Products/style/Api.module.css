@@ -62,8 +62,6 @@
 
 .imgDiv {
     height: 300px;
-    /* width: 300px; */
-
 }
 
 .imgDiv img {
@@ -119,4 +117,13 @@
     .proName{
         margin-top: 30px!important;
        }
+       .imgDiv {
+        height: 130px;
+    }
+    
+    .imgDiv img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 }
