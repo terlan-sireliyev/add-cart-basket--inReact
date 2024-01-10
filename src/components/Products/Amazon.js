@@ -6,15 +6,16 @@ import Search_products from './Search_products'
 
 export default function Amazon({ cart, handleClik }) {
     const [products, setProducts] = useState([]);
-    const [filteredUsers, setFilteredUsers] = useState([])
+    const [filteredProduct, setFilteredProduct] = useState([])
     const [searchItem, setSearchItem] = useState('')
     const [sort, setSort] = useState('')
     const [slice, setSlice] = useState('')
+    const [sortBy, setSortBy] = useState('All')
 
     async function fetchData() {
         const res = await ((await fetch('https://fakestoreapi.com/products')).json())
         setProducts(res);
-        setFilteredUsers(res)
+        setFilteredProduct(res)
     }
     useEffect(() => {
         async function dataFetch() {
@@ -40,9 +41,9 @@ export default function Amazon({ cart, handleClik }) {
             const filteredItems = products.filter((user) =>
                 user.title.toLowerCase().startsWith(searchTerm.toLowerCase())
             );
-            setFilteredUsers(filteredItems);
+            setFilteredProduct(filteredItems);
         } else {
-            setFilteredUsers(products)
+            setFilteredProduct(products)
         }
         setSearchItem(searchTerm)
     }
@@ -62,14 +63,20 @@ export default function Amazon({ cart, handleClik }) {
             </div>
             <div className={styleApi.amazonBoxDiv}>
                 {
-                    filteredUsers.sort((a, b) =>
-                        sort === 'A-Z' ? a.price - b.price :
-                            sort === "Z-A" ? b.price - a.price :"")
-                        .map((item) => (
-                            <>
-                                <Cards item={item} handleClik={handleClik} />
-                            </>
-                        ))
+                    [...filteredProduct].sort((a, b) => {
+                        if (sort === "A-Z") {
+                            if (a.price < b.price)
+                                return -1;
+                        }
+                        if (sort === "Z-A") {
+                            if (a.price > b.price)
+                                return -1;
+                        }
+                    }).map((item) => (
+                        <>
+                            <Cards item={item} handleClik={handleClik} />
+                        </>
+                    ))
                 }
             </div>
 

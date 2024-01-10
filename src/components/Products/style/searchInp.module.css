@@ -1,13 +1,12 @@
 .searchInp{
-    height: 50px;
-    display: flex;
+    /* height: 50px; */
     margin-left: 20px;
     border: 1px solid #efefee;
     padding: 5px;
     display: flex;
     justify-content: flex-end;
     margin-bottom: 10px;
-   
+    
 }
 .searchInp select{
     width: 100px!important;
@@ -21,4 +20,17 @@
 }
 .searchInp input:focus{
     outline: none;
+}
+.selectDiv{
+    display: flex;
+}
+
+@media only screen and (max-width: 530px) {
+    .searchInp{
+         display: flex; 
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+       }
 }
