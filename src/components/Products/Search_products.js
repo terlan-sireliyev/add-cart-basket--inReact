@@ -3,7 +3,7 @@ import styleSearch from './style/searchInp.module.css'
 export default function Search_products({ onChange, setSort, setSlice, products, setProducts, searchItem, handleInputChange }) {
 
     return (
-        <digit
+        <div>
             <div className={styleSearch.searchInp}>
                 <div className={styleSearch.inputDiv}>
                     <input
