@@ -54,6 +54,7 @@
 }
 .countProducts{
     margin-top: -7px;
+    margin-bottom: 10px;
 }
 .countProducts button:nth-child(2){
     padding: 3px 20px 3px 20px!important;
@@ -88,6 +89,9 @@
  }
  .commonPrice p {
     margin-left: 15px;
+ }
+ .commonPrice span {
+    color: red;
  }
  .productsAbout{
     margin-top: 10px;
@@ -159,25 +163,14 @@
     .basketContainer{
         width: 350px;
        }
+        
 }
 @media only screen and (max-width: 413px) {
     .basketContainer{
         width: 320px;
        }
-       .commonPrice p:nth-child(1){
-          font-size: 14px;
-          font-weight: 600;
-          margin-top: 10px;
-       }
-       .commonPrice span{
-        font-size: 15px;
-        font-weight: bold;
-        margin-top: 10px;
-        color: red;
-     }
-     .countProducts{
-        margin-bottom: 10px;
-     }
+        
+     
 }
 @media only screen and (max-width: 375px) {
     .basketContainer{
