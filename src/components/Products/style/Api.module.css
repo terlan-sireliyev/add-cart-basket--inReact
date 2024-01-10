@@ -30,6 +30,7 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: block-axis;
     display: -webkit-box;
+   
 }
 
 .btnDiv {
@@ -113,4 +114,9 @@
         grid-gap: 45px 20px;
         justify-content: center;
     }
+}
+@media only screen and (max-width: 530px) {
+    .proName{
+        margin-top: 30px!important;
+       }
 }
