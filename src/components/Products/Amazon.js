@@ -47,17 +47,18 @@ export default function Amazon({ cart, handleClik }) {
     const sliceSort = (e) => {
         const limitSelectValue = e.target.value;
         if (limitSelectValue === 'five') {
-            const limit = [...products].slice(0, 5);
+            const limit = products.slice(0, 5);
             setFilteredProduct(limit)
             // setProducts(limit)
         }
         if (limitSelectValue === 'ten') {
-            const limit = [...products].slice(0, 10);
-            setFilteredProduct(limit)
-            // setProducts(limit)
+            const limitTen =products.slice(0, 10);
+            setFilteredProduct(limitTen)
+            // setFilteredProduct(limit);
+            // setProducts(limitTen)
         }
         if (limitSelectValue === 'all') {
-            const limit = [...products].slice(0, products.length);
+            const limit = products.slice(0, products.length);
             setFilteredProduct(limit)
             // setProducts(limit)
         }

@@ -7,7 +7,7 @@ export default function CartBasket({ cart, setCart, show, setShow, size }) {
         setCountCard(prevItems => {
             return prevItems.map(item => {
                 if (item.id === id) {
-                    return { ...item, quantity: item.quantity + 1 }
+                    return { ...item, quantity: item.quantity +1}
                 }
                 return item;
             });
@@ -18,7 +18,7 @@ export default function CartBasket({ cart, setCart, show, setShow, size }) {
         setCountCard(prevItems => {
             return prevItems.map(item => {
                 if (item.id === id) {
-                    return { ...item, quantity: item.quantity - 1 }
+                    return { ...item, quantity: item.quantity === 1 ? item.quantity :item.quantity-1 }
                 }
                 return item;
             });
@@ -93,9 +93,9 @@ export default function CartBasket({ cart, setCart, show, setShow, size }) {
 
                             {/* styleBasket.commonPrice */}
                             <div className={styleBasket.commonPrice}>
-                                <p>Sizin basket cartinizda: {cart.length} eded mehsulunuz vardir.</p>
+                                <p>Item count: <span>{cart.length}</span></p>
                                 <p>
-                                    Ümumi qiymət: {price}  AZN
+                                    Total price: {price}  AZN
                                 </p>
                             </div>
                         </div>
